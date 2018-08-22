@@ -51,7 +51,36 @@ glm::mat4 camera(float Translate, glm::vec2 const& Rotate)
 
 ## Release notes
 
-### [GLM 0.9.9.0](https://github.com/g-truc/glm/releases/tag/0.9.9.0) - 2018-05-08
+### [GLM 0.9.9.1](https://github.com/g-truc/glm/commits/master) - 2018-0X-XX
+#### Features:
+- Added bitfieldDeinterleave to GTC_bitfield
+- Added missing equal and notEqual with epsilon for quaternion types to GTC_quaternion
+- Added EXT_matrix_relational: equal and notEqual with epsilon for matrix types
+- Added missing aligned matrix types to GTC_type_aligned
+- Added C++17 detection
+- Added Visual C++ language standard version detection
+
+#### Improvements:
+- Added missing vec1 based constructors
+- Redesigned constexpr support which excludes both SIMD and constexpr #783
+- Added detection of Visual C++ 2017 toolsets
+- Added identity functions #765
+- Splitted headers into EXT extensions to improve compilation time #670
+- Added separated performance tests
+
+#### Fixes:
+- Fixed SIMD detection on Clang and GCC
+- Fixed build problems due to printf and std::clock_t #778
+- Fixed int mod
+- Anonymous unions require C++ language extensions
+- Fixed ortho #790
+- Fixed Visual C++ 2013 warnings in vector relational code #782
+- Fixed ICC build errors with constexpr #704
+- Fixed defaulted operator= and constructors #791
+- Fixed invalid conversion from int scalar with vec4 constructor when using SSE instruction
+- Fixed infinite loop in random functions when using negative radius values using an assert #739
+
+### [GLM 0.9.9.0](https://github.com/g-truc/glm/releases/tag/0.9.9.0) - 2018-05-22
 #### Features:
 - Added RGBM encoding in GTC_packing #420
 - Added GTX_color_encoding extension
